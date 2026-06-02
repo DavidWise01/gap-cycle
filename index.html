@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Gap Cycle — a muster roll</title>
+<meta name="description" content="The Gap Cycle by Stephen R. Donaldson, sorted by trope and parable. No heroes — only the Ring reforged." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --void:      #070709;
+    --void-2:    #0d0d11;
+    --bone:      #d8d2c4;
+    --bone-dim:  #8e887b;
+    --bone-faint:#5a564d;
+    --rust:      #6e1f12;
+    --steel:     #2a3550;
+    --amnion:    #3a7d4a;
+    --rule:      #1c1c22;
+    --serif: "Cormorant Garamond", "EB Garamond", Georgia, serif;
+    --body:  "EB Garamond", "Cormorant Garamond", Georgia, serif;
+    --mono:  "Space Mono", ui-monospace, monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--void);
+    color: var(--bone);
+    font-family: var(--body);
+    font-size: 19px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ---- starfield + broken ring behind masthead ---- */
+  .void-field {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 50% 18%, rgba(42,53,80,0.10), transparent 55%),
+      radial-gradient(circle at 80% 80%, rgba(110,31,18,0.06), transparent 50%),
+      linear-gradient(180deg, var(--void) 0%, var(--void-2) 60%, var(--void) 100%);
+  }
+  .stars {
+    position: absolute;
+    inset: -10%;
+    background-image:
+      radial-gradient(1px 1px at 20% 30%, rgba(216,210,196,0.6), transparent),
+      radial-gradient(1px 1px at 70% 20%, rgba(216,210,196,0.45), transparent),
+      radial-gradient(1px 1px at 40% 70%, rgba(216,210,196,0.5), transparent),
+      radial-gradient(1px 1px at 85% 55%, rgba(216,210,196,0.4), transparent),
+      radial-gradient(1px 1px at 15% 80%, rgba(216,210,196,0.5), transparent),
+      radial-gradient(1px 1px at 60% 90%, rgba(216,210,196,0.35), transparent),
+      radial-gradient(1px 1px at 90% 10%, rgba(216,210,196,0.4), transparent),
+      radial-gradient(1px 1px at 33% 12%, rgba(216,210,196,0.45), transparent),
+      radial-gradient(1px 1px at 50% 50%, rgba(216,210,196,0.3), transparent);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    opacity: 0.55;
+    animation: drift 140s linear infinite;
+  }
+  @keyframes drift {
+    from { transform: translateY(0) translateX(0); }
+    to   { transform: translateY(-3%) translateX(1.5%); }
+  }
+  .ring-motif {
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    width: min(620px, 90vw);
+    height: min(620px, 90vw);
+    transform: translateX(-50%) rotate(-8deg);
+    opacity: 0.10;
+    animation: turn 320s linear infinite;
+  }
+  @keyframes turn {
+    from { transform: translateX(-50%) rotate(-8deg); }
+    to   { transform: translateX(-50%) rotate(352deg); }
+  }
+
+  /* ---- layout ---- */
+  .wrap {
+    position: relative;
+    z-index: 1;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 6rem 1.6rem 4rem;
+  }
+
+  /* ---- masthead ---- */
+  .masthead { text-align: center; padding-bottom: 3.5rem; }
+  .title {
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    font-size: clamp(2.4rem, 7vw, 4.6rem);
+    letter-spacing: 0.16em;
+    margin: 0;
+    color: var(--bone);
+    line-height: 1.05;
+    text-shadow: 0 0 40px rgba(110,31,18,0.18);
+  }
+  .subtitle {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--bone-dim);
+    margin: 1.6rem 0 0;
+  }
+  .epigraph {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+    line-height: 1.5;
+    color: var(--bone);
+    max-width: 38ch;
+    margin: 2.8rem auto 0;
+    font-weight: 500;
+  }
+  .epigraph::before, .epigraph::after { content: "\201C"; }
+  .epigraph::after { content: "\201D"; }
+  .ring-line {
+    color: var(--bone-faint);
+    font-size: 1.02rem;
+    max-width: 48ch;
+    margin: 2rem auto 0;
+    line-height: 1.55;
+  }
+  .attrib {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    color: var(--bone-dim);
+    margin-top: 1rem;
+  }
+
+  /* ---- generic section eyebrow ---- */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--bone-faint);
+    text-align: center;
+    margin: 0 0 1.6rem;
+  }
+  .hr-thin {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 4rem 0;
+  }
+
+  /* ---- the ring underneath panel ---- */
+  .underneath {
+    border: 1px solid var(--rule);
+    background: rgba(13,13,17,0.5);
+    padding: 2rem 2.2rem;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .underneath h2 {
+    font-family: "Cinzel", serif;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--bone-dim);
+    text-align: center;
+    margin: 0 0 1.4rem;
+  }
+  .parallel { margin: 0; }
+  .parallel div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid rgba(28,28,34,0.6);
+    font-size: 1.05rem;
+  }
+  .parallel div:last-child { border-bottom: 0; }
+  .parallel .who { font-family: var(--serif); font-weight: 600; color: var(--bone); }
+  .parallel .arrow { color: var(--bone-faint); }
+  .parallel .myth { font-style: italic; color: var(--bone-dim); text-align: right; }
+
+  /* ---- the parables / roll ---- */
+  .roll-head {
+    font-family: "Cinzel", serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--bone-dim);
+    margin: 0 0 3rem;
+  }
+
+  .class-block { margin-bottom: 3.4rem; }
+  .class-block-header {
+    border-left: 3px solid var(--cls-color, var(--rule));
+    padding: 0.2rem 0 0.2rem 1.1rem;
+    margin-bottom: 1.4rem;
+  }
+  .class-tag {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.22rem 0.6rem;
+    background: var(--cls-color, #222);
+    color: var(--cls-ink, #fff);
+    margin-bottom: 0.6rem;
+  }
+  .class-label {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: var(--bone);
+    margin: 0;
+    line-height: 1.1;
+  }
+  .class-spec {
+    font-family: var(--body);
+    font-style: italic;
+    color: var(--bone-dim);
+    font-size: 1.05rem;
+    margin-top: 0.15rem;
+  }
+
+  .member {
+    border-left: 1px solid var(--rule);
+    padding: 0.7rem 0 0.7rem 1.1rem;
+    margin-left: 0.05rem;
+  }
+  .member + .member { margin-top: 0.4rem; }
+  .member-name {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.28rem;
+    color: var(--bone);
+    line-height: 1.25;
+  }
+  .member-spec {
+    font-family: var(--body);
+    color: var(--bone-dim);
+    font-size: 1.04rem;
+    line-height: 1.55;
+    margin-top: 0.15rem;
+  }
+
+  /* class-specific moods */
+  .class-block[data-id="other"] {
+    box-shadow: -1px 0 0 var(--amnion);
+  }
+  .class-block[data-id="other"] .member-spec { color: #6fae7e; }
+  .class-block[data-id="other"] .class-spec { color: #5e9c6e; }
+  .class-block[data-id="dragon"] .class-label { color: #c98a76; }
+  .class-block[data-id="spider"] { opacity: 0.94; }
+  .class-block[data-id="spider"] .member-name { color: #cfcfcf; }
+
+  /* ---- no heroes here / parable ---- */
+  .parable-final {
+    text-align: center;
+    margin: 6rem auto 2rem;
+    max-width: 720px;
+    padding: 0 1rem;
+  }
+  .parable-rule {
+    border: 0;
+    border-top: 2px solid var(--rust);
+    width: 80px;
+    margin: 0 auto 3rem;
+    opacity: 0.6;
+  }
+  .parable-tag {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--bone-faint);
+    margin-bottom: 2.4rem;
+  }
+  .parable-label {
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    letter-spacing: 0.1em;
+    color: var(--bone);
+    margin: 0 0 2.6rem;
+    line-height: 1.2;
+  }
+  .parable-thesis {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(1.3rem, 3.2vw, 1.85rem);
+    line-height: 1.62;
+    color: var(--bone);
+    margin: 0 auto;
+    max-width: 36ch;
+  }
+
+  /* ---- footer ---- */
+  .agent-line {
+    text-align: center;
+    font-family: var(--body);
+    font-style: italic;
+    color: var(--bone-faint);
+    font-size: 1rem;
+    margin: 5rem auto 0;
+    max-width: 56ch;
+  }
+  .agent-line code {
+    font-family: var(--mono);
+    font-style: normal;
+    font-size: 0.82rem;
+    color: var(--bone-dim);
+  }
+  footer {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 3rem 1.6rem 4rem;
+    border-top: 1px solid var(--rule);
+    margin-top: 4rem;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer .root {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    color: var(--bone-dim);
+    word-spacing: 0.1em;
+  }
+  footer a { color: var(--bone); text-decoration: none; border-bottom: 1px solid var(--bone-faint); }
+  footer a:hover { color: var(--bone); border-bottom-color: var(--rust); }
+  footer .links {
+    margin-top: 1.4rem;
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: var(--bone-faint);
+  }
+  footer .siblings { margin-top: 1rem; font-family: var(--body); font-size: 0.95rem; color: var(--bone-faint); }
+  footer .siblings a { color: var(--bone-dim); border-bottom-color: var(--rule); }
+  footer .disclaimer {
+    margin-top: 2rem;
+    font-family: var(--body);
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--bone-faint);
+    max-width: 56ch;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 600px) {
+    body { font-size: 18px; }
+    .wrap { padding: 4rem 1.2rem 2rem; }
+    .underneath { padding: 1.5rem 1.2rem; }
+    .parallel div { flex-direction: column; gap: 0.1rem; }
+    .parallel .myth { text-align: left; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stars, .ring-motif { animation: none !important; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+  <div class="void-field" aria-hidden="true">
+    <div class="stars"></div>
+    <svg class="ring-motif" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="100" r="92" stroke="#6e1f12" stroke-width="0.8" stroke-dasharray="430 40" />
+      <circle cx="100" cy="100" r="76" stroke="#2a3550" stroke-width="0.5" stroke-dasharray="300 80" />
+    </svg>
+  </div>
+
+  <main class="wrap">
+    <header class="masthead">
+      <h1 class="title">THE GAP CYCLE</h1>
+      <p class="subtitle" id="subtitle"></p>
+      <p class="epigraph">The Ring reforged: power corrupts, transformation costs the self, and redemption is possible only at a price no hero would pay.</p>
+      <p class="ring-line" id="ring-line"></p>
+      <p class="attrib">— Stephen R. Donaldson</p>
+    </header>
+
+    <hr class="hr-thin" />
+
+    <section class="underneath" aria-labelledby="underneath-h">
+      <h2 id="underneath-h">The Ring Underneath</h2>
+      <div class="parallel">
+        <div><span class="who">Warden Dios</span><span class="arrow">·</span><span class="myth">Wotan — the god who pays</span></div>
+        <div><span class="who">Holt Fasner</span><span class="arrow">·</span><span class="myth">Fafner — the hoarding dragon</span></div>
+        <div><span class="who">Morn Hyland</span><span class="arrow">·</span><span class="myth">Brünnhilde — the will that chooses</span></div>
+      </div>
+    </section>
+
+    <hr class="hr-thin" />
+
+    <section aria-labelledby="roll-h">
+      <h2 class="roll-head" id="roll-h">The Parables</h2>
+      <div id="roll"></div>
+    </section>
+
+    <p class="agent-line">
+      Every member carries a <code>.agent</code> — who you are · what you do · where you belong — in <code>agents/</code>.
+    </p>
+  </main>
+
+  <footer>
+    <p class="root">ROOT0-ATTRIBUTION-v1.0 · The Gap Cycle · David Lee Wise / ROOT0 / TriPod LLC · MIT</p>
+    <p class="links"><a href="https://github.com/DavidWise01/gap-cycle">github.com/DavidWise01/gap-cycle</a></p>
+    <p class="siblings">
+      see also:
+      <a href="https://github.com/DavidWise01/bridge-burners">Bridge Burners</a> ·
+      <a href="https://github.com/DavidWise01/black-company">Black Company</a> ·
+      <a href="https://github.com/DavidWise01/wheel-of-time">Wheel of Time</a>
+    </p>
+    <p class="disclaimer">
+      Characters by Stephen R. Donaldson, referenced as inspiration only. The cycle's darkest material is treated here as archetype, not detail.
+    </p>
+  </footer>
+
+<script>
+  "use strict";
+
+  // ---- roster embedded inline (source of truth, verbatim) ----
+  const ROSTER = {
+    "company": "The Gap Cycle",
+    "subtitle": "no heroes — only tropes, and the parables underneath",
+    "author": "Stephen R. Donaldson",
+    "ring": "a science-fiction reforging of Wagner's Ring: Warden Dios as the one-eyed god who pays, Holt Fasner as the hoarding dragon, Morn as the will that chooses.",
+    "note": "The Gap Cycle sorted not by heroism — there is none — but by trope and parable, in the manner of the muster roll. Every member carries a .agent (who you are · what you do · where you belong). roster.json is the source of truth. Characters by Stephen R. Donaldson, referenced as inspiration only; the cycle's darkest material is treated here as archetype, not detail.",
+    "classes": [
+      { "id": "dragon",   "label": "The Dragon",            "spec": "greed without end",                 "color": "#6e1f12", "ink": "#f0d8c8" },
+      { "id": "god",      "label": "The God Who Pays",      "spec": "the long game · self spent on a bet","color": "#2a3550", "ink": "#e8e8f4" },
+      { "id": "survivor", "label": "The Survivor",          "spec": "agency wrenched back",              "color": "#cdbf9f", "ink": "#1a1a1a" },
+      { "id": "monster",  "label": "The Redeemed Monster",  "spec": "can the irredeemable be redeemed?", "color": "#3a2a22", "ink": "#e0c8b8" },
+      { "id": "predator", "label": "The Charming Predator", "spec": "charisma as a blade",               "color": "#7c1f3a", "ink": "#fff" },
+      { "id": "spider",   "label": "The Spider",            "spec": "manipulation as art",               "color": "#26262a", "ink": "#cfcfcf" },
+      { "id": "blade",    "label": "The Honest Blade",      "spec": "fidelity kept when all else bends", "color": "#3a4250", "ink": "#fff" },
+      { "id": "other",    "label": "The Other",             "spec": "assimilation · the self consumed",  "color": "#3a7d4a", "ink": "#eafff0" },
+      { "id": "maker",    "label": "The Maker",             "spec": "atonement through creation",        "color": "#1f6e6a", "ink": "#fff" },
+      { "id": "children", "label": "The Forced Generation", "spec": "made, not born · choosing meaning", "color": "#8a6a3a", "ink": "#fff" },
+      { "id": "parable",  "label": "No Heroes Here",        "spec": "the thesis of the cycle",           "color": "#111114", "ink": "#cbb8a0" }
+    ],
+    "members": [
+      { "name": "Holt Fasner",     "class": "dragon", "specialty": "CEO of the United Mining Companies — the Dragon in his warren, chasing immortality through other people's bodies. The hoard that eats the world to live one more day. (Wagner's Fafner, grown corporate.)" },
+      { "name": "Warden Dios",     "class": "god", "specialty": "Director of the UMCP — the one-eyed man who spends his own name, his honor, and his soul on a decades-long bet that humanity, given the truth, will choose well. The god who pays the price himself. (Wotan.)" },
+      { "name": "Morn Hyland",     "class": "survivor", "specialty": "UMCP ensign; the still, burning center of the cycle. Used by every power that touches her — and who wrenches her own agency back from all of them. The will to choose, reforged from violation. (Brünnhilde.)" },
+      { "name": "Angus Thermopyle","class": "monster", "specialty": "Illegal miner, brutal and broken; the abused who became the abuser; welded into a cyborg slave by a zone implant. The cycle's deepest, hardest question made flesh: whether even he can find a sliver of grace." },
+      { "name": "Nick Succorso",   "class": "predator", "specialty": "Pirate captain whose scars flush when he kills; charm worn like a knife; vanity that mistakes itself for destiny — and breaks when the universe declines to agree." },
+      { "name": "Sorus Chatelaine","class": "predator", "specialty": "Captain of Soar; trader with the Amnion; a predator who is herself caged — cruelty as the shape of her own captivity." },
+      { "name": "Hashi Lebwohl",   "class": "spider", "specialty": "UMCP Data Acquisition; amoral genius who spins manipulation as fine art; never lies, never says it plain; serves an order only he can see." },
+      { "name": "Min Donner",      "class": "blade", "specialty": "UMCP Enforcement Division director; the hard, honest cop; keeps faith and her sidearm when everyone above her bends. The one who will not look away. (The Valkyrie who stays true.)" },
+      { "name": "The Amnion",      "class": "other", "specialty": "Alien gene-imperium; trades in mutagens; offers transformation as the annihilation of the self. The consumption that wears your face afterward and calls it cooperation." },
+      { "name": "Vector Shaheed",  "class": "maker", "specialty": "Geneticist turned ship's mechanic; calm hands, old guilt; atones by building the one thing that can undo the Amnion mutagen — and broadcasting the cure to everyone, free. 'Just doing my job.'" },
+      { "name": "Davies Hyland",   "class": "children", "specialty": "Morn's son, force-grown to a man in hours and given her memories; a child made, not born, who must choose what to do with a self he was handed." },
+      { "name": "Mikka, Ciro & Sib","class": "children", "specialty": "The crew of Trumpet — ordinary people crushed and then ennobled by the machine; the ones the parable is finally about." },
+      { "name": "No Heroes Here",  "class": "parable", "specialty": "The Gap Cycle keeps no heroes. It keeps a dragon's greed, a god who pays, a monster who reaches for grace, a survivor who chooses anyway — and asks whether the will to choose, freely, is the only freedom there is. The Ring reforged: power corrupts, transformation costs the self, and redemption is possible only at a price no hero would pay. That is the parable. Witness it." }
+    ]
+  };
+
+  // ---- helpers ----
+  function esc(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  // ---- masthead text from data ----
+  document.getElementById("subtitle").textContent = ROSTER.subtitle;
+  document.getElementById("ring-line").textContent = ROSTER.ring;
+
+  // ---- build the roll ----
+  const roll = document.getElementById("roll");
+  const main = document.querySelector("main.wrap");
+  const agentLine = document.querySelector(".agent-line");
+
+  ROSTER.classes.forEach(function (cls) {
+    const members = ROSTER.members.filter(function (m) { return m.class === cls.id; });
+
+    // The parable class is rendered set-apart as the closing meditation.
+    if (cls.id === "parable") {
+      const thesis = members.length ? members[0].specialty : cls.spec;
+      const section = document.createElement("section");
+      section.className = "parable-final";
+      section.innerHTML =
+        '<hr class="parable-rule" />' +
+        '<p class="parable-tag">' + esc(cls.spec) + '</p>' +
+        '<h2 class="parable-label">' + esc(cls.label) + '</h2>' +
+        '<p class="parable-thesis">' + esc(thesis) + '</p>';
+      // place it after the agent line, set apart in the void
+      main.insertBefore(section, agentLine);
+      return;
+    }
+
+    const block = document.createElement("div");
+    block.className = "class-block";
+    block.setAttribute("data-id", cls.id);
+    block.style.setProperty("--cls-color", cls.color);
+    block.style.setProperty("--cls-ink", cls.ink);
+
+    let html =
+      '<div class="class-block-header">' +
+        '<span class="class-tag">' + esc(cls.label) + '</span>' +
+        '<h3 class="class-label">' + esc(cls.label) + '</h3>' +
+        '<div class="class-spec">' + esc(cls.spec) + '</div>' +
+      '</div>';
+
+    members.forEach(function (m) {
+      html +=
+        '<div class="member">' +
+          '<div class="member-name">' + esc(m.name) + '</div>' +
+          '<div class="member-spec">' + esc(m.specialty) + '</div>' +
+        '</div>';
+    });
+
+    block.innerHTML = html;
+    roll.appendChild(block);
+  });
+</script>
+</body>
+</html>

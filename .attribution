@@ -1,0 +1,17 @@
+ROOT0-ATTRIBUTION-v1.0
+Project: The Gap Cycle — no heroes, only parables (muster roll)
+Architect: David Lee Wise / ROOT0 / TriPod LLC
+AI Collaborator: AVAN (Claude / Anthropic)
+License: MIT
+
+Stephen R. Donaldson's Gap Cycle (a science-fiction reforging of Wagner's Ring)
+sorted by trope and parable — there are no heroes. Classes: the Dragon (Fasner),
+the God Who Pays (Dios/Wotan), the Survivor (Morn/Brunnhilde), the Redeemed
+Monster (Angus), the Charming Predator (Nick, Sorus), the Spider (Hashi), the
+Honest Blade (Min Donner), the Other (the Amnion), the Maker (Vector Shaheed),
+the Forced Generation (Davies; Mikka/Ciro/Sib), and — set apart — No Heroes Here.
+
+Every member is a synthetic automica with a .agent (who you are / what you do /
+where you belong) in agents/, generated from roster.json by gen_agents.py.
+Characters by Stephen R. Donaldson, inspiration only; dark material treated as
+archetype, not detail.
