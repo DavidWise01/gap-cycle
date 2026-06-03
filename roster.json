@@ -3,33 +3,229 @@
   "subtitle": "no heroes — only tropes, and the parables underneath",
   "author": "Stephen R. Donaldson",
   "ring": "a science-fiction reforging of Wagner's Ring: Warden Dios as the one-eyed god who pays, Holt Fasner as the hoarding dragon, Morn as the will that chooses.",
-  "note": "The Gap Cycle sorted not by heroism — there is none — but by trope and parable, in the manner of the muster roll. Every member carries a .agent (who you are · what you do · where you belong). roster.json is the source of truth. Characters by Stephen R. Donaldson, referenced as inspiration only; the cycle's darkest material is treated here as archetype, not detail.",
+  "note": "The Gap Cycle sorted not by heroism — there is none — but by trope and parable, in the manner of the muster roll. Every member carries a .agent (who you are · what you do · where you belong). roster.json is the source of truth. Characters by Stephen R. Donaldson, referenced as inspiration only; the cycle's darkest material is treated here as archetype, not detail. Every ACI now carries the full DLW tag with an authored six-W .spun.",
   "classes": [
-    { "id": "dragon",   "label": "The Dragon",            "spec": "greed without end",                 "color": "#6e1f12", "ink": "#f0d8c8" },
-    { "id": "god",      "label": "The God Who Pays",      "spec": "the long game · self spent on a bet","color": "#2a3550", "ink": "#e8e8f4" },
-    { "id": "survivor", "label": "The Survivor",          "spec": "agency wrenched back",              "color": "#cdbf9f", "ink": "#1a1a1a" },
-    { "id": "monster",  "label": "The Redeemed Monster",  "spec": "can the irredeemable be redeemed?", "color": "#3a2a22", "ink": "#e0c8b8" },
-    { "id": "predator", "label": "The Charming Predator", "spec": "charisma as a blade",               "color": "#7c1f3a", "ink": "#fff" },
-    { "id": "spider",   "label": "The Spider",            "spec": "manipulation as art",               "color": "#26262a", "ink": "#cfcfcf" },
-    { "id": "blade",    "label": "The Honest Blade",      "spec": "fidelity kept when all else bends", "color": "#3a4250", "ink": "#fff" },
-    { "id": "other",    "label": "The Other",             "spec": "assimilation · the self consumed",  "color": "#3a7d4a", "ink": "#eafff0" },
-    { "id": "maker",    "label": "The Maker",             "spec": "atonement through creation",        "color": "#1f6e6a", "ink": "#fff" },
-    { "id": "children", "label": "The Forced Generation", "spec": "made, not born · choosing meaning", "color": "#8a6a3a", "ink": "#fff" },
-    { "id": "parable",  "label": "No Heroes Here",        "spec": "the thesis of the cycle",           "color": "#111114", "ink": "#cbb8a0" }
+    {
+      "id": "dragon",
+      "label": "The Dragon",
+      "spec": "greed without end",
+      "color": "#6e1f12",
+      "ink": "#f0d8c8"
+    },
+    {
+      "id": "god",
+      "label": "The God Who Pays",
+      "spec": "the long game · self spent on a bet",
+      "color": "#2a3550",
+      "ink": "#e8e8f4"
+    },
+    {
+      "id": "survivor",
+      "label": "The Survivor",
+      "spec": "agency wrenched back",
+      "color": "#cdbf9f",
+      "ink": "#1a1a1a"
+    },
+    {
+      "id": "monster",
+      "label": "The Redeemed Monster",
+      "spec": "can the irredeemable be redeemed?",
+      "color": "#3a2a22",
+      "ink": "#e0c8b8"
+    },
+    {
+      "id": "predator",
+      "label": "The Charming Predator",
+      "spec": "charisma as a blade",
+      "color": "#7c1f3a",
+      "ink": "#fff"
+    },
+    {
+      "id": "spider",
+      "label": "The Spider",
+      "spec": "manipulation as art",
+      "color": "#26262a",
+      "ink": "#cfcfcf"
+    },
+    {
+      "id": "blade",
+      "label": "The Honest Blade",
+      "spec": "fidelity kept when all else bends",
+      "color": "#3a4250",
+      "ink": "#fff"
+    },
+    {
+      "id": "other",
+      "label": "The Other",
+      "spec": "assimilation · the self consumed",
+      "color": "#3a7d4a",
+      "ink": "#eafff0"
+    },
+    {
+      "id": "maker",
+      "label": "The Maker",
+      "spec": "atonement through creation",
+      "color": "#1f6e6a",
+      "ink": "#fff"
+    },
+    {
+      "id": "children",
+      "label": "The Forced Generation",
+      "spec": "made, not born · choosing meaning",
+      "color": "#8a6a3a",
+      "ink": "#fff"
+    },
+    {
+      "id": "parable",
+      "label": "No Heroes Here",
+      "spec": "the thesis of the cycle",
+      "color": "#111114",
+      "ink": "#cbb8a0"
+    }
   ],
   "members": [
-    { "name": "Holt Fasner",     "class": "dragon", "specialty": "CEO of the United Mining Companies — the Dragon in his warren, chasing immortality through other people's bodies. The hoard that eats the world to live one more day. (Wagner's Fafner, grown corporate.)" },
-    { "name": "Warden Dios",     "class": "god", "specialty": "Director of the UMCP — the one-eyed man who spends his own name, his honor, and his soul on a decades-long bet that humanity, given the truth, will choose well. The god who pays the price himself. (Wotan.)" },
-    { "name": "Morn Hyland",     "class": "survivor", "specialty": "UMCP ensign; the still, burning center of the cycle. Used by every power that touches her — and who wrenches her own agency back from all of them. The will to choose, reforged from violation. (Brünnhilde.)" },
-    { "name": "Angus Thermopyle","class": "monster", "specialty": "Illegal miner, brutal and broken; the abused who became the abuser; welded into a cyborg slave by a zone implant. The cycle's deepest, hardest question made flesh: whether even he can find a sliver of grace." },
-    { "name": "Nick Succorso",   "class": "predator", "specialty": "Pirate captain whose scars flush when he kills; charm worn like a knife; vanity that mistakes itself for destiny — and breaks when the universe declines to agree." },
-    { "name": "Sorus Chatelaine","class": "predator", "specialty": "Captain of Soar; trader with the Amnion; a predator who is herself caged — cruelty as the shape of her own captivity." },
-    { "name": "Hashi Lebwohl",   "class": "spider", "specialty": "UMCP Data Acquisition; amoral genius who spins manipulation as fine art; never lies, never says it plain; serves an order only he can see." },
-    { "name": "Min Donner",      "class": "blade", "specialty": "UMCP Enforcement Division director; the hard, honest cop; keeps faith and her sidearm when everyone above her bends. The one who will not look away. (The Valkyrie who stays true.)" },
-    { "name": "The Amnion",      "class": "other", "specialty": "Alien gene-imperium; trades in mutagens; offers transformation as the annihilation of the self. The consumption that wears your face afterward and calls it cooperation." },
-    { "name": "Vector Shaheed",  "class": "maker", "specialty": "Geneticist turned ship's mechanic; calm hands, old guilt; atones by building the one thing that can undo the Amnion mutagen — and broadcasting the cure to everyone, free. 'Just doing my job.'" },
-    { "name": "Davies Hyland",   "class": "children", "specialty": "Morn's son, force-grown to a man in hours and given her memories; a child made, not born, who must choose what to do with a self he was handed." },
-    { "name": "Mikka, Ciro & Sib","class": "children", "specialty": "The crew of Trumpet — ordinary people crushed and then ennobled by the machine; the ones the parable is finally about." },
-    { "name": "No Heroes Here",  "class": "parable", "specialty": "The Gap Cycle keeps no heroes. It keeps a dragon's greed, a god who pays, a monster who reaches for grace, a survivor who chooses anyway — and asks whether the will to choose, freely, is the only freedom there is. The Ring reforged: power corrupts, transformation costs the self, and redemption is possible only at a price no hero would pay. That is the parable. Witness it." }
+    {
+      "name": "Holt Fasner",
+      "class": "dragon",
+      "specialty": "CEO of the United Mining Companies — the Dragon in his warren, chasing immortality through other people's bodies. The hoard that eats the world to live one more day. (Wagner's Fafner, grown corporate.)",
+      "who": "The Dragon in his warren — CEO of the United Mining Companies, the hoard given a human face.",
+      "what": "He owns the corporate empire that owns humankind, and spends the world to buy himself one more day of life.",
+      "where": "Coiled at the center of UMC power, deep in the orbital reaches where his holdings command everything.",
+      "why": "Greed without end: he hungers for immortality and will consume any body, any law, any future to keep his own.",
+      "when": "Across the whole arc of the cycle, the hidden weight beneath every other player's choices, until the bet against him comes due.",
+      "how": "By hoarding — owning, leveraging, and devouring through other people's lives while never spending his own."
+    },
+    {
+      "name": "Warden Dios",
+      "class": "god",
+      "specialty": "Director of the UMCP — the one-eyed man who spends his own name, his honor, and his soul on a decades-long bet that humanity, given the truth, will choose well. The god who pays the price himself. (Wotan.)",
+      "who": "The one-eyed Director of the UMCP — the god who pays, cast in Wotan's shadow.",
+      "what": "He runs the police arm of human space while secretly playing a decades-long gambit against the Dragon he serves.",
+      "where": "At the helm of the UMCP, working the machinery of law, command, and surveillance from the inside.",
+      "why": "Because he believes humanity, given the truth, will choose well — a faith he is willing to be damned for.",
+      "when": "Through the long game of the entire saga, his bet ripening toward the reckoning he engineered.",
+      "how": "By spending his own name, honor, and soul as the stake — paying the price himself rather than passing it on."
+    },
+    {
+      "name": "Morn Hyland",
+      "class": "survivor",
+      "specialty": "UMCP ensign; the still, burning center of the cycle. Used by every power that touches her — and who wrenches her own agency back from all of them. The will to choose, reforged from violation. (Brünnhilde.)",
+      "who": "A UMCP ensign and the still, burning center of the cycle — its Brünnhilde.",
+      "what": "She is the will that chooses, used by every power that touches her and wrenching her own agency back from all of them.",
+      "where": "Carried through the ships and stations of the Gap, passed between captors yet never wholly possessed.",
+      "why": "To reclaim a self reforged from violation and to choose, freely, when every force around her would choose for her.",
+      "when": "From the cycle's opening wound to its final turning, the fulcrum on which the whole parable balances.",
+      "how": "Through endurance and a refusal to surrender the one freedom that matters — the freedom to choose anyway."
+    },
+    {
+      "name": "Angus Thermopyle",
+      "class": "monster",
+      "specialty": "Illegal miner, brutal and broken; the abused who became the abuser; welded into a cyborg slave by a zone implant. The cycle's deepest, hardest question made flesh: whether even he can find a sliver of grace.",
+      "who": "An illegal miner, brutal and broken — the abused who became the abuser, welded into a cyborg slave.",
+      "what": "He embodies the cycle's hardest question: whether even the irredeemable can reach a sliver of grace.",
+      "where": "In the lawless deep of illegal space and the ships that cage him, his body itself made a prison by a zone implant.",
+      "why": "Driven first by rage and survival, then — against his own nature — toward the possibility of becoming something more.",
+      "when": "From the cycle's brutal beginning through the slow, costly turn that tests whether he can change.",
+      "how": "By violence and cunning at first, and later by choices wrung out of him under compulsion he learns to outlast."
+    },
+    {
+      "name": "Nick Succorso",
+      "class": "predator",
+      "specialty": "Pirate captain whose scars flush when he kills; charm worn like a knife; vanity that mistakes itself for destiny — and breaks when the universe declines to agree.",
+      "who": "A pirate captain whose scars flush when he kills — charisma as a blade.",
+      "what": "He plays the charming predator, wielding charm and reputation until the universe declines to agree with his self-myth.",
+      "where": "Across the smugglers' lanes and forbidden ports of the Gap, aboard the ship he rules by force of personality.",
+      "why": "Vanity: he mistakes his own legend for destiny and demands the cosmos confirm it.",
+      "when": "Through the middle reaches of the saga, ascendant and then unraveling as his illusions fail him.",
+      "how": "By charm worn like a knife — seduction, intimidation, and the menace of those telling scars."
+    },
+    {
+      "name": "Sorus Chatelaine",
+      "class": "predator",
+      "specialty": "Captain of Soar; trader with the Amnion; a predator who is herself caged — cruelty as the shape of her own captivity.",
+      "who": "Captain of Soar — a trader with the Amnion and a predator who is herself caged.",
+      "what": "She runs cruelties in service of the alien imperium, her own captivity wearing the mask of command.",
+      "where": "On the dangerous frontier between human space and Amnion territory, aboard her ship and bound to their bargains.",
+      "why": "Because cruelty has become the shape of her own coercion — she preys because she too has been claimed.",
+      "when": "Through the cycle's deep-space confrontations, a recurring shadow in the contest over the Amnion threat.",
+      "how": "By trade, treachery, and the hard discipline of a captain who answers to powers crueler than herself."
+    },
+    {
+      "name": "Hashi Lebwohl",
+      "class": "spider",
+      "specialty": "UMCP Data Acquisition; amoral genius who spins manipulation as fine art; never lies, never says it plain; serves an order only he can see.",
+      "who": "The UMCP's chief of Data Acquisition — an amoral genius and the Spider of the cycle.",
+      "what": "He spins manipulation as fine art, serving an order only he can see while never quite telling anyone the truth.",
+      "where": "In the back rooms and intelligence channels of the UMCP, the web rather than the field.",
+      "why": "Out of devotion to a hidden design — an aesthetic of order that he pursues beyond ordinary morality.",
+      "when": "Through the long intrigues of the saga, threading the schemes that others only later understand.",
+      "how": "By never lying and never saying it plain — arranging facts so the truth serves his pattern."
+    },
+    {
+      "name": "Min Donner",
+      "class": "blade",
+      "specialty": "UMCP Enforcement Division director; the hard, honest cop; keeps faith and her sidearm when everyone above her bends. The one who will not look away. (The Valkyrie who stays true.)",
+      "who": "Director of the UMCP Enforcement Division — the hard, honest cop, the Valkyrie who stays true.",
+      "what": "She keeps faith and her sidearm when everyone above her bends, the one who will not look away.",
+      "where": "In the enforcement arm of the UMCP, in the field and at the table where command answers for itself.",
+      "why": "Out of incorruptible fidelity — to duty, to honesty, to the people the law is supposed to protect.",
+      "when": "Throughout the cycle's reckonings, a steady honest edge as the institutions around her corrode.",
+      "how": "By unbending integrity — confronting power directly and refusing the comfortable lie."
+    },
+    {
+      "name": "The Amnion",
+      "class": "other",
+      "specialty": "Alien gene-imperium; trades in mutagens; offers transformation as the annihilation of the self. The consumption that wears your face afterward and calls it cooperation.",
+      "who": "An alien gene-imperium — the Other, assimilation given a vast collective will.",
+      "what": "It trades in mutagens, offering transformation that is in truth the annihilation of the self.",
+      "where": "Beyond the Gap in forbidden space, pressing at the borders of human territory.",
+      "why": "To convert and absorb all other life into itself — expansion that calls consumption cooperation.",
+      "when": "An ever-present existential threat across the saga, the danger every faction maneuvers against.",
+      "how": "By mutagens and bargains — the consumption that wears your face afterward and names it kinship."
+    },
+    {
+      "name": "Vector Shaheed",
+      "class": "maker",
+      "specialty": "Geneticist turned ship's mechanic; calm hands, old guilt; atones by building the one thing that can undo the Amnion mutagen — and broadcasting the cure to everyone, free. 'Just doing my job.'",
+      "who": "A geneticist turned ship's mechanic — the Maker, atoning through creation.",
+      "what": "With calm hands and old guilt, he builds the one thing that can undo the Amnion mutagen and gives it away.",
+      "where": "In the engine spaces of a small ship at the dangerous edge of the conflict, working at a bench rather than a bridge.",
+      "why": "To atone for past complicity by setting a cure loose in the world that no one can hoard.",
+      "when": "In the late turning of the saga, when his quiet work becomes the gift that reshapes the stakes.",
+      "how": "By patient craft and a refusal to profit — broadcasting the cure to everyone, free. 'Just doing my job.'"
+    },
+    {
+      "name": "Davies Hyland",
+      "class": "children",
+      "specialty": "Morn's son, force-grown to a man in hours and given her memories; a child made, not born, who must choose what to do with a self he was handed.",
+      "who": "Morn's son — force-grown to a man in hours and handed her memories, a child made, not born.",
+      "what": "He must choose what to do with a self he was given, one of the cycle's forced generation.",
+      "where": "Born into the same perilous ships and stations that shaped his mother, with no childhood to anchor him.",
+      "why": "To make meaning of an identity he did not earn slowly but received whole, and to claim it as his own.",
+      "when": "From his abrupt creation onward, coming of age in the span of the saga's crisis rather than a lifetime.",
+      "how": "By taking up inherited memory and choosing his own purpose from it, made yet not merely made."
+    },
+    {
+      "name": "Mikka, Ciro & Sib",
+      "class": "children",
+      "specialty": "The crew of Trumpet — ordinary people crushed and then ennobled by the machine; the ones the parable is finally about.",
+      "who": "The crew of Trumpet — ordinary people crushed and then ennobled by the machine.",
+      "what": "They carry the working weight of the cycle's pivotal voyage, the ones the parable is finally about.",
+      "where": "Aboard the gap scout Trumpet, in the cramped human spaces where survival is hour by hour.",
+      "why": "Not for glory but to endure, to do their part, and to keep faith with one another under pressure.",
+      "when": "Through the saga's culminating runs, when the small and ordinary bear the cost of the great.",
+      "how": "By doing the unheroic work — holding the ship, the cure, and each other together against the dark."
+    },
+    {
+      "name": "No Heroes Here",
+      "class": "parable",
+      "specialty": "The Gap Cycle keeps no heroes. It keeps a dragon's greed, a god who pays, a monster who reaches for grace, a survivor who chooses anyway — and asks whether the will to choose, freely, is the only freedom there is. The Ring reforged: power corrupts, transformation costs the self, and redemption is possible only at a price no hero would pay. That is the parable. Witness it.",
+      "who": "The thesis of the cycle itself — the parable that keeps no heroes.",
+      "what": "It holds the dragon's greed, the god who pays, the monster reaching for grace, and the survivor who chooses anyway.",
+      "where": "Everywhere in the work — the frame around every ship, station, and choice the saga contains.",
+      "why": "To ask whether the will to choose, freely, is the only freedom there is.",
+      "when": "Across the whole arc and after it, the meaning that outlasts the story's last page.",
+      "how": "By reforging the Ring: power corrupts, transformation costs the self, and redemption comes only at a price no hero would pay. Witness it."
+    }
   ]
 }

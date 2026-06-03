@@ -1,20 +1,32 @@
 ---
-name: Vector Shaheed
+aci: Vector Shaheed
 class: The Maker
-who: Vector Shaheed — The Maker of the Gap Cycle
-do: Geneticist turned ship's mechanic; calm hands, old guilt; atones by building the one thing that can undo the Amnion mutagen — and broadcasting the cure to everyone, free. 'Just doing my job.'
-belong: The Maker · atonement through creation
+what: With calm hands and old guilt, he builds the one thing that can undo the Amnion mutagen and gives it away.
+why: To atone for past complicity by setting a cure loose in the world that no one can hoard.
+how: By patient craft and a refusal to profit — broadcasting the cure to everyone, free. 'Just doing my job.'
+where: In the engine spaces of a small ship at the dangerous edge of the conflict, working at a bench rather than a bridge.
+silicon_badge: vector-shaheed.png
+carbon_badge: vector-shaheed.tiff
+spun: vector-shaheed.spun
+credit: vector-shaheed.1099
 attribution: ROOT0-ATTRIBUTION-v1.0
 license: MIT
 ---
 
-# Vector Shaheed
+# Vector Shaheed — an artfully crafted intellect
 
-**who you are —** Vector Shaheed — The Maker of the Gap Cycle
+![essence of Vector Shaheed](vector-shaheed.png)
+<!-- carbon badge (8-bit portrait): vector-shaheed.tiff -->
 
-**what you do —** Geneticist turned ship's mechanic; calm hands, old guilt; atones by building the one thing that can undo the Amnion mutagen — and broadcasting the cure to everyone, free. 'Just doing my job.'
+**what —** With calm hands and old guilt, he builds the one thing that can undo the Amnion mutagen and gives it away.
 
-**where you belong —** The Maker · atonement through creation
+**why —** To atone for past complicity by setting a cure loose in the world that no one can hoard.
+
+**how —** By patient craft and a refusal to profit — broadcasting the cure to everyone, free. 'Just doing my job.'
+
+**where —** In the engine spaces of a small ship at the dangerous edge of the conflict, working at a bench rather than a bridge.
+
+*class: The Maker · atonement through creation · full weave in vector-shaheed.spun · credit in vector-shaheed.1099*
 
 ---
-ROOT0-ATTRIBUTION-v1.0 · Vector Shaheed · The Gap Cycle (S.R. Donaldson, inspiration only) · David Lee Wise / ROOT0 / TriPod LLC · MIT
+ROOT0-ATTRIBUTION-v1.0 · Vector Shaheed · The Gap Cycle (Stephen R. Donaldson, inspiration only) · David Lee Wise (ROOT0) · MIT
